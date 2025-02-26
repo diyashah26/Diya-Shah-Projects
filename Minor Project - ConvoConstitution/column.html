@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match the Column Game</title>
+  <link rel="stylesheet" href="column.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+    <ul id="menu" class="menu hidden">
+      <li><a href="home.html">Home</a></li>
+      <!-- <li><a href="Myprofile.html">My Profile</a></li> -->
+      <!-- <li><a href="aboutus.html">About Us</a></li> -->
+      <li><a href="games.html">Games</a></li>
+    </ul>
+  </div>
+  <h1>Match the Column Game</h1>
+  <div class="container">
+    <div class="column">
+      <h3>Items</h3>
+      <div class="item" draggable="true" data-match="1">A state where the head of the state is an elected person</div>
+      <div class="item" draggable="true" data-match="2">A state where the government is run by the elected members of the people</div>
+      <div class="item" draggable="true" data-match="3">A state which is independent of external interference</div>
+      <div class="item" draggable="true" data-match="4">A state where there is no discrimination against any religion</div>
+      <div class="item" draggable="true" data-match="5">A state that lays emphasis on economic and social equality</div>
+      <div class="item" draggable="true" data-match="6">An Introductory statement in the constitution</div>
+      <div class="item" draggable="true" data-match="7">26th january, 1950</div>
+    <div class="item" draggable="true" data-match="8">A court that settles disputes of most people at a tehsil level</div>
+  <div class="item" draggable="true" data-match="9">There are 25 such courts, three having jurisdiction over more than one state</div>
+<div class="item" draggable="true" data-match="10">This court has the highest authority in India</div>
+</div>
+    <div class="column">
+      <h3>Matches</h3>
+      <div class="dropzone" data-match="2">Democratic</div>
+      <div class="dropzone" data-match="3">Sovereign</div>
+      <div class="dropzone" data-match="1">Republic</div>
+      <div class="dropzone" data-match="5">Socialist</div>
+      <div class="dropzone" data-match="4">Secular</div>
+      <div class="dropzone" data-match="7">Indian Constitution</div>
+      <div class="dropzone" data-match="6">Preamble</div>
+      <div class="dropzone" data-match="9">High Court</div>
+      <div class="dropzone" data-match="10">Supreme Court</div>
+      <div class="dropzone" data-match="8">District Court</div>
+    </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  <script src="column.js"></script>
+</body>
+</html>

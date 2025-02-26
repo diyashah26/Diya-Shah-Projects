@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a id="quiz" href="quizpage.html">Take Quiz</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="facts.html">Interesting Facts</a></li>
+            <!-- Update the logout link with an id -->
+            <li><a id="logoutButton" href="#"><i class="fas fa-sign-out-alt"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="outercontent"> 
+        <div class="content">
+            <h2>Let's Learn About</h2>
+            <h1>CONSTITUTION OF INDIA</h1>
+            <h2>In A Simpler Manner</h2>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 ConvoConstitution. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+
+   
+    
+    
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/13/10/20241113101845-J1FVU1GQ.js"></script>
+    
+    
+    
+
+    <!-- Include Firebase script -->
+   
+
+    <script type="module">
+        // Initialize Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyCOSDfkqzuzR3mw3VTT8KFH8a-o25JmOh4",
+            authDomain: "let-s-learn-about-constitution.firebaseapp.com",
+            projectId: "let-s-learn-about-constitution",
+            storageBucket: "let-s-learn-about-constitution.appspot.com",
+            messagingSenderId: "103999258365",
+            appId: "1:103999258365:web:77ae1d6132091cee4c8894",
+            measurementId: "G-L4TTDX842H"
+        };
+    
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    
+        // Redirect to login if user is not authenticated
+        onAuthStateChanged(auth, (user) => {
+            if (!user) {
+                // If user is not logged in, redirect to the login page
+                window.location.href = "firstpage.html";
+            }
+        });
+    
+        // Logout functionality
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            signOut(auth).then(() => {
+                console.log('Logged out');
+                window.location.href = "logout.html"; // Redirect to login page after logout
+                alert("Logged out successfully!");
+            }).catch((error) => {
+                console.error('Error signing out:', error);
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
+

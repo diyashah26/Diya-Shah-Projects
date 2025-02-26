@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background:url('flag.jpeg.jpg'); /* Black background for the body */
+    height: 100vh;
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    /* background-image: url('flag.jpeg.jpg'); Set your image here */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    
+}
+
+.overlay {
+    /* background: rgba(0, 0, 0, 0.5); Black overlay for better readability */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start; /* Align the glass-container to the left */
+    align-items: center;
+    backdrop-filter: blur(20px);
+}
+
+.glass-container {
+    
+    text-align: center;
+    /* background: white; Light white background with transparency for "glass" effect
+    color: black; /* Black text color */
+    padding: 80px;
+    height: 450px;
+    border: 3px solid rgb(21, 18, 17);
+    border-radius: 30px; /* Rectangular container */
+    width: 80%; /* Slightly smaller width */
+    max-width: 600px; /* Maximum size reduced */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Slight shadow for depth */
+    position: absolute; /* Position the container on the left */
+    left: 0;
+    margin-left: 400px; /* Added margin to create space from left edge */
+    
+}
+
+.welcome-text h1 {
+    font-size: 2.9rem; /* Slightly larger text size */
+    color: black; /* Black font color for visibility */
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Mild shadow for contrast */
+}
+
+.welcome-text p {
+    font-size: 1.4em; /* Slightly smaller text size */
+    color: black; /* Black color for paragraph text */
+    margin-bottom: 60px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Mild shadow for contrast */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Arrange buttons in a column */
+    align-items: center; /* Center the buttons horizontally */
+    gap: 0.5px; /* Space between buttons */
+    width: 100%;
+    /* display: flex;
+    justify-content: space-between; /* Close buttons together
+    margin-left:150px;
+    width: 50%; /* Ensure buttons are evenly spaced 
+    gap: 10px; Added gap between buttons */
+} 
+
+.glass-button {
+    padding: 10px 20px;
+    height: 60px; /* Adjust the height to make it rectangular */
+    width: 100%; /* Make the button take full width of its container */
+    max-width: 400px; /* Optional: Set a max-width to prevent it from becoming too wide */
+    margin-bottom: 10px; /* Space between buttons */
+    font-size: 1.5em; /* Button text size */
+    border: none;
+    border-radius: 25px; /* Rounded edges */
+    color: white;
+    background: linear-gradient(135deg, #3ee42f, #246FA8); /* Green to blue gradient */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for buttons */
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s; /* Smooth transitions */
+    display: block; /* Make it block-level element for full-width */
+}
+
+.glass-button:hover {
+    transform: translateY(-3px); /* Hover effect to move button up */
+    background: linear-gradient(135deg, #d8580d, #e85617); /* Button hover effect */
+}

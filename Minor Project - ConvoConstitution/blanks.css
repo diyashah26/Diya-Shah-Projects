@@ -1,0 +1,185 @@
+body {
+    /* font-family: 'Comic Sans MS', cursive, sans-serif; */
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+    background-color: #dfec64a6;
+    color: #444;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the leftmost corner */
+    margin: 10px;
+    z-index: 1000;
+  }
+  
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #06d9ec52;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hamburger:hover {
+    background-color: #05b4c05d;
+  }
+  
+  .menu {
+    list-style:none;
+    position:fixed;
+    top: 50px;
+    left: 10px; /* Align dropdown menu below the hamburger */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: grid;
+    flex-direction:column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .menu.hidden {
+    display: none;
+  }
+  
+  .menu li {
+    text-align: left;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    background-color: #06d9ec57;
+    color: white;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px ;
+    font-size: 2.5rem;
+    color: #3b3939;
+    text-shadow: 2px 2px #cbe5bb;
+  }
+  
+  /* Container styling */
+  .container {
+    border: 3px dashed #0000009f;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.334);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: inline-block;
+    margin-left:150px;
+    padding:20px;
+  }
+  
+  /* Sentence with blanks */
+  .sentence {
+    margin: 20px 0;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  /* Blank spaces for drag-and-drop */
+  .blank {
+    border: 3px dashed #ffc107;
+    border-radius: 10px;
+    min-width: 120px; /* Minimum width */
+    display: inline-flex; /* Flex layout for better content alignment */
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Allow height to adjust based on content */
+    padding: 15px 10px; /* Add padding for better spacing */
+    margin: 0 10px;
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #444;
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    overflow: hidden; /* Prevent content overflow */
+  }
+  
+  
+  .blank:hover {
+    background-color: #ffefd5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blank.correct {
+    background-color: #c8e6c9; /* Green */
+    border-color: #4caf50;
+    padding: auto;
+  }
+  
+  .blank.incorrect {
+    background-color: #ffcccc; /* Red */
+    border-color: #e53935;
+  }
+  
+  /* Word bank and drag-drop animations remain the same */
+  
+  /* Word bank styling */
+  .words {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Individual words */
+  .word {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: grab;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .word:hover {
+    background-color: #81c784;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .word.dragging {
+    opacity: 0.6;
+    transform: rotate(-5deg) scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Blank space interaction styling */
+  .blank.dragover {
+    background-color: #c8e6c9;
+    border-color: #4caf50;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .sentence {
+      font-size: 1.2em;
+    }
+    .blank {
+      width: 100px;
+      height: 35px;
+      font-size: 1em;
+    }
+    .word {
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+  }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvoConstitution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Facts Quest</h1>
+        <h2>Welcome to the Pinball Game</h2>
+        <button id="start-button">Start Game</button>
+    </div>
+    <div id="game-screen" style="display:none;">
+        <canvas id="myCanvas" width="600" height="400"></canvas>
+    </div>
+    <div id="end-screen" style="display:none;">
+        <h1>Game Over!</h1>
+        <p id="score-summary"></p>
+        <button id="try-again-button">Try Again</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

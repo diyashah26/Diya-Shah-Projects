@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - ConvoConstitution</title>
+    <link rel="stylesheet" href="logout.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>You have successfully logged out!</h1>
+        <p>Thank you for visiting ConvoConstitution!</p>
+        <p>We hope to see you again soon.</p>
+        <a href="firstpage.html" class="button">Return to Home</a>
+    </div>
+
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Sign out the user
+        auth.signOut().then(() => {
+            console.log("User signed out");
+            // Redirect to homepage after logout
+            window.location.href = "index.html";
+        }).catch((error) => {
+            console.error("Error signing out: ", error);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: #f4f4f4;
+    color: #ffffff;
+    height: 100vh;
+    background: url('flag.jpeg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    text-align:center;
+    
+}
+
+
+.navbar {
+    background-color: #020000;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+
+.content {
+    margin: auto;
+    padding: 150px; 
+    
+    font-size: 25px;
+    border-radius: 15px;
+    text-align:center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+    display:inline-block;
+    background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.outercontent{
+    place-items: center;
+    /* position: absolute; */
+    width: auto;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+#login{
+    border: 2px solid white;
+    border-radius: 5px;
+}
+#quiz{
+    border-radius: 5px;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-sHadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} 
+footer {
+    text-align: center;
+    padding: 50px;
+    background-color: #000000;
+    color: white;
+}
+
+footer .social-links a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+
+

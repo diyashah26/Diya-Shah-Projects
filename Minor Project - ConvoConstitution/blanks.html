@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill in the Blanks Game</title>
+  <link rel="stylesheet" href="blanks.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+    <ul id="menu" class="menu hidden">
+      <li><a href="home.html">Home</a></li>
+      <!-- <li><a href="Myprofile.html">My Profile</a></li> -->
+      <!-- <li><a href="aboutus.html">About Us</a></li> -->
+      <li><a href="games.html">Games</a></li>
+    </ul>
+  </div>
+  <h1> Fill in the blanks </h1>
+  <div class="container">
+    <div class="sentence">
+      1. The highest law making body in India is the <span class="blank" id="blank1"></span>.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word1">High Court</div>
+      <div class="word" draggable="true" id="word2">Parliament</div>
+    </div>
+    <div class="sentence">
+      2. The constitution of india was adopted on <span class="blank" id="blank2"></span>.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word3">26th November 1949</div>
+      <div class="word" draggable="true" id="word4">15th August 1947</div>
+    </div>
+    <div class="sentence">
+      3. The Supreme Court of India is the <span class="blank" id="blank3"></span> court in the country.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word5">highest</div>
+      <div class="word" draggable="true" id="word6">lowest</div>
+    </div>
+    <div class="sentence">
+      4. The Chief Justice of India is appointed by the <span class="blank" id="blank4"></span>.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word7">President</div>
+      <div class="word" draggable="true" id="word8">Prime Minister</div>
+    </div>
+    <div class="sentence">
+      5. The High Courts are at the <span class="blank" id="blank5"></span> level of the judiciary.
+    </div><div class="words">
+      <div class="word" draggable="true" id="word9">state</div>
+      <div class="word" draggable="true" id="word10">central</div>
+    </div>  
+    <div class="sentence">
+      6. <span class="blank" id="blank6"></span> is the principle of equal treatment before the law.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word11">Equality before law</div>
+      <div class="word" draggable="true" id="word12">Right to property</div>
+    </div>
+    <div class="sentence">
+      7. The right to life and personal liberty is guaranteed by <span class="blank" id="blank7"></span> of the constitution.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word13">Article 21</div>
+      <div class="word" draggable="true" id="word14">Article 32</div>
+    </div>
+    <div class="sentence">
+      8. <span class="blank" id="blank8"></span>is the power of the Supreme Court to declare laws unconstituional.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word15">Judicial review</div>
+      <div class="word" draggable="true" id="word16">Parliamentary sovereignty</div>
+    </div>
+    <div class="sentence">
+      9. The judiciary is an <span class="blank" id="blank9"></span> branch of the government.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word17">independent</div>
+      <div class="word" draggable="true" id="word18">executive</div>
+    </div>
+    <div class="sentence">
+      10. The judiciary ensures that the government functions within the limits of the  <span class="blank" id="blank10"></span>.
+    </div>
+    <div class="words">
+      <div class="word" draggable="true" id="word19">Constitution</div>
+      <div class="word" draggable="true" id="word20">law</div>
+    </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  <script src="blanks.js"></script>
+</body>
+</html>

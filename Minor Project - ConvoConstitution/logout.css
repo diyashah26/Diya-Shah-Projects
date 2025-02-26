@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background:url('flag.jpeg.jpg');
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content:center; /* Align content to the left */
+    align-items: center;
+    /* background-image: url('flag.jpeg.jpg'); Set your image here */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+}
+
+.logout-container {
+    border:3px solid black;
+    border-radius:15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    height: 450px;
+    text-align: center;
+    margin-top:100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: #062745;
+    font-size: 3em;
+}
+
+p {
+    color: #0a2d30;
+    font-size: 1.6em;
+}
+
+.button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    border-radius: 25px; /* Rounded edges */
+    transform: translateY(-3px); 
+    /* background: linear-gradient(135deg, #d8580d, #e85617);  */
+
+}
+
+.button:hover {
+    background-color: #2980b9;
+
+}

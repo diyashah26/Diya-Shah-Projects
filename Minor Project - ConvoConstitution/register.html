@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" id="submit">Register</button>
+            <br><br>
+            <!-- <a href="home.html">Home</a> -->
+        </form>
+        <p id="error-message"></p>
+    </div>
+
+    <script type="module">
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+
+       
+        const firebaseConfig = {
+            apiKey: "AIzaSyCOSDfkqzuzR3mw3VTT8KFH8a-o25JmOh4",
+            authDomain: "let-s-learn-about-constitution.firebaseapp.com",
+            projectId: "let-s-learn-about-constitution",
+            storageBucket: "let-s-learn-about-constitution.appspot.com",
+            messagingSenderId: "103999258365",
+            appId: "1:103999258365:web:77ae1d6132091cee4c8894",
+            measurementId: "G-L4TTDX842H"
+        };
+
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);  
+        const db = getDatabase(app); 
+
+        
+        document.getElementById("submit").addEventListener('click', function (e) {
+            e.preventDefault();
+            const fullName = document.getElementById("fullName").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+console.log(fullName,email,password,confirmPassword);
+            
+            if (password !== confirmPassword) {
+                document.getElementById("error-message").innerText = "Passwords do not match!";
+                return;
+            }
+            if (password.length < 8 || !/[A-Z]/.test(password) || !/[0-9]/.test(password)) {
+                document.getElementById("error-message").innerText = "Password must be at least 8 characters long, contain a number and an uppercase letter.";
+                return;
+            }
+
+            
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    
+                    set(ref(db, 'users/' + user.uid), {
+                        fullName: fullName,
+                        email: user.email
+                    });
+                    window.location.href = "home.html";
+                    alert("Registration successful!");
+                })
+                .catch((error) => {
+                    document.getElementById("error-message").innerText = `Error: ${error.message}`;
+                });
+        });
+    </script>
+
+    <script src="register.js"></script>
+</body>
+</html>
+

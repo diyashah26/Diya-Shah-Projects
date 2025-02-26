@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+<body class="root">
+    <div class="main2">
+        <div class="login-container">
+            <h1>Login</h1>
+            <div id="error" class="error"></div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div><br><br>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required checked>
+                    <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <p class="register-option">
+                Don't have an account? <a href="register.html">Register</a>
+            </p>
+            <br>
+            <!-- <a href="home.html">Home</a> -->
+        </div>
+    </div>
+
+    
+    <script type="module">
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyCOSDfkqzuzR3mw3VTT8KFH8a-o25JmOh4",
+            authDomain: "let-s-learn-about-constitution.firebaseapp.com",
+            projectId: "let-s-learn-about-constitution",
+            storageBucket: "let-s-learn-about-constitution.appspot.com",
+            messagingSenderId: "103999258365",
+            appId: "1:103999258365:web:77ae1d6132091cee4c8894",
+            measurementId: "G-L4TTDX842H"
+        };
+
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const termsAccepted = document.getElementById("terms").checked;
+            const errorDiv = document.getElementById("error");
+
+            
+            if (!termsAccepted) {
+                errorDiv.innerText = "You must agree to the terms and conditions!";
+                return;
+            }
+
+            
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    
+                    window.location.href = "home.html";
+                    alert("login successfully!");
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    
+                    errorDiv.innerText = `Login failed: No user found`;
+                });
+        });
+    </script>
+</body>
+</html>

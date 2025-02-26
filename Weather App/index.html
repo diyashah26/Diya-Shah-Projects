@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-amber-100">
+    <div class="container flex justify-center items-center">
+        <div class="flex flex-col items-center">
+        <h1 class= "text-black rounded-lg border-2 border-black bg-white text-3xl text-center p-4 w-40">Weather App</h1><br>
+       <div class="max-w-100 max-h-100 text-center bg-blue-200 font-light input-container border-2 rounded-lg border-black p-32 m-10 sm:grid-cols-2">
+         <input class="rounded-lg border-2 p-2 border-gray-400" type="text" id="city-input" placeholder=" Enter city name" class="col-span-1"/>
+        <button class="border-gray-400 col-span-1" id="get-weather-btn">Get Weather</button>
+        <br>
+    <div id="weather-info" class="hidden">
+        <h2 id="city-name"></h2>
+        <p id="temperature"></p>
+        <p id="description"></p>
+    </div>
+      
+
+    <p id="error-message" class="hidden">City not found. Please try again.</p>
+    </div>
+     </div>
+       </div>
+     <script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+</body>
+</html>

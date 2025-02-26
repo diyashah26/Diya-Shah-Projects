@@ -1,0 +1,112 @@
+:root {
+    --background-color: #4A7A7A;
+    --card-background: #F9F3EA;
+    --primary-color: #D97C4A;
+    --text-color: #333;
+    /* --font-family: 'Open Sans', sans-serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --font-heading: 'Gulfs Display normal';
+    --heading-bg-color: #D97C4A;
+    --heading-text-color: #FFF;
+    --box-shadow: 10px 10px 20px #e6e5e533;
+    --box-shadow-hover: 20px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#heading{
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.466);
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    /* font-family: var(--font-family); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.heading-container {
+    width: 100%;
+    background-color: var(--heading-bg-color);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.heading-title {
+    /* font-family: var(--font-heading); */
+    font-weight: lighter;
+    letter-spacing: 2px;
+    word-spacing:15px;
+    font-size: 48px;
+    color: var(--heading-text-color);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: var(--card-background);
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    position: relative;}
+
+.card:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: scale(1.2);
+    z-index: 10
+}
+
+
+
+.card h1 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: bold;
+    /* font-family: var(--font-heading); */
+    font-weight: lighter;
+    letter-spacing: 1px;
+    word-spacing:normal;
+    font-style: normal;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.card .icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card .footer .username {
+    font-size: 12px;
+    color: var(--text-color);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvoConstitution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Welcome to the Pinball Game</h1>
+        <button id="start-button">Start Game</button>
+    </div>
+    <div id="game-screen">
+        <h2>Game Screen</h2>
+        <button id="fact-button">Show a Random Fact</button>
+        
+        <!-- Modal for Random Fact -->
+        <div id="fact-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <p id="fact-text"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="end-screen" style="display: none;">
+        <h2>Game Over</h2>
+        <p id="score-summary"></p>
+        <p id="random-fact" style="font-style: italic;"></p>
+        <button id="try-again-button">Try Again</button>
+    </div>
+    
+
+    <script src="game.js"></script>
+</body>
+</html>

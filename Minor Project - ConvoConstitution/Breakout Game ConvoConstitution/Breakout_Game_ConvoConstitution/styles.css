@@ -1,0 +1,52 @@
+/* * {
+	padding: 0;
+	margin: 0;
+} 
+
+#myCanvas {
+	background: #eee;
+	display: block;
+	margin: 0 auto;
+} */
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1c1c1c, #0a0a0a);
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Canvas Styling */
+canvas {
+    display: block;
+    border: 3px solid #00ffcc;
+    border-radius: 10px;
+    background: radial-gradient(circle, #222, #111);
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #0077ff inset;
+}
+
+/* Score and Lives Styling */
+#score, #lives {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 0px 0px 5px #00ffcc, 0px 0px 10px #0077ff;
+}
+
+#score {
+    top: 10px;
+    left: 20px;
+}
+
+#lives {
+    top: 10px;
+    right: 20px;
+}
